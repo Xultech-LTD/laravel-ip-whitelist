@@ -1,0 +1,32 @@
+# Node
+node_modules/
+
+# Composer
+/vendor
+composer.lock
+
+# Laravel specific
+.env
+.env.*.php
+.phpunit.result.cache
+storage/
+bootstrap/cache/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Coverage / Testing
+coverage/
+tests/output/
+*.log
+
+# Generated files
+.phpunit.cache
+/pest-results.json

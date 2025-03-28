@@ -1,0 +1,61 @@
+{
+    "name": "xultech/laravel-ip-whitelist",
+    "description": "Laravel middleware package for IP whitelisting with CIDR and wildcard support.",
+    "keywords": [
+        "laravel",
+        "ip whitelist",
+        "middleware",
+        "cidr",
+        "ip filter",
+        "security"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Erastus",
+            "email": "michael.erastus@xultechng.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xultech\\LaravelIpWhitelist\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xultech\\LaravelIpWhitelist\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xultech\\LaravelIpWhitelist\\IpWhitelistServiceProvider"
+            ],
+            "aliases": {
+                "IpWhitelist": "Xultech\\LaravelIpWhitelist\\Facades\\IpWhitelist"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
